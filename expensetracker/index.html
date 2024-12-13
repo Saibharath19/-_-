@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <div class="form">
+            <label for="dailyLimit">Enter your daily spending limit:</label>
+            <input type="number" id="dailyLimit" placeholder="Enter amount">
+            <button onclick="setDailyLimit()">Set Limit</button>
+        </div>
+        <div id="expenseTracker" style="display: none;">
+            <div class="form">
+                <label for="expenseName">Expense Name:</label>
+                <input type="text" id="expenseName" placeholder="Enter expense name">
+                <label for="expenseAmount">Expense Amount:</label>
+                <input type="number" id="expenseAmount" placeholder="Enter amount">
+                <button onclick="addExpense()">Add Expense</button>
+            </div>
+            <div>
+                <button onclick="viewTotalExpenses()">View Total Expenses</button>
+                <div id="totalExpenses"></div>
+            </div>
+            <div>
+                <button onclick="viewAllExpenses()">View All Expenses</button>
+                <ul id="allExpenses"></ul>
+            </div>
+            <div class="form">
+                <label for="deleteIndex">Delete Expense (Enter index):</label>
+                <input type="number" id="deleteIndex" placeholder="Enter index">
+                <button onclick="deleteExpense()">Delete Expense</button>
+            </div>
+            <button onclick="exit()">Exit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
